@@ -14,7 +14,7 @@ node {
 
     stage "Build"
 
-        sh "env"
+        sh "usermod -aG docker jenkins"
         sh "id"
         sh "docker build -t ${imageName} -f applications/hello-kenzan/Dockerfile applications/hello-kenzan"
     
